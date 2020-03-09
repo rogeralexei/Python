@@ -1,4 +1,4 @@
-import msvcrt
+
 if __name__ == "__main__":
     print("Lista de Supermercado")
     lista={}
@@ -68,4 +68,3 @@ if __name__ == "__main__":
     for e in lista:
         listanueva.write("\n"+e)
     listanueva.close()
-    msvcrt.getch()

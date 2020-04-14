@@ -1,9 +1,1 @@
-Usuarios
-Hernan
-Adrian
-Juan
-
-Usuarios
-Hernan
-Adrian
-Juan
+['Rut', 'Noemi', 'Hernan', 'Abigail', 'Adrien', 'AdrienV17']

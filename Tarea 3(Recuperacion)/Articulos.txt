@@ -1,1 +1,1 @@
-{'Coca-Cola': {'Precio': 1.0, 'Cantidad': 50}, 'Mirinda': {'Precio': 2.0, 'Cantidad': 90}, 'Squirt': {'Precio': 5.0, 'Cantidad': 15}, 'Fresca': {'Precio': 15.0, 'Cantidad': 4}}
+{'Mirinda': {'Precio': 2.0, 'Cantidad': 90}, 'Squirt': {'Precio': 5.0, 'Cantidad': 15}, 'Fresca': {'Precio': 15.0, 'Cantidad': 4}, '7up': {'Precio': 1.0, 'Cantidad': 50}}

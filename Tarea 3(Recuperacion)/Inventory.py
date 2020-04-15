@@ -7,14 +7,11 @@ class Articulo:
         self.price = price
         self.quantity = quantity
 
-
-
-
 # Getting Users
 with open('usuarios.txt') as userfiles:
     usuarios = eval(userfiles.read())
 
-# Getting Articlees
+# Getting Articles
 with open('articulos.txt') as articlefiles:
     articulos = eval(articlefiles.read())
 
@@ -174,7 +171,7 @@ if __name__ == '__main__':
 
             except ValueError:
 
-                print('Porfavor, elija un numero entero entre 1 y 4')
+                print('Porfavor, elija un numero entero entre 1 y 5')
             
             else:
 

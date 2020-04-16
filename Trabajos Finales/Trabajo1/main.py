@@ -1,45 +1,87 @@
-#Lista de nombres prohibidos
+#Lista de palabras prohibidas
 
-with open('usuarios.txt') as usuariosprob:
-    usuarios = usuariosprob.read().split('\n')
-    print(usuarios)
+# Abriendo el archivo con las palabras prohibidas
+with open('palabras.txt') as rarastxt:
+    prohibido = rarastxt.read().split('\n')
 
-def pruebanombre(nombre):
-
-    if nombre.capitalize() in usuarios:
+# Funcion que hace el juego entero jejeje
+def prueba():
     
-       return print('Nombre invalido... Intente nuevamente')
     
-    else:
+    while True:
+        
+        fallo = True
+        
+        while fallo:
 
-       return print('Nombre valido')
+            palabra = input('\nIngresa una palabra: \n R/. ')
+            
+            fallo = unapalabra(palabra)
 
+        fallo = True
+        if palabra.capitalize() in prohibido:
+        
+            print(f'\n{palabra.capitalize()} => Palabra Invalida... Intente nuevamente')
+        
+        else:
+           
+            print(f'\n{palabra.capitalize()} => Palabra Valida')
+
+            # Viendo si el usuario quiere jugar de nuevo
+            while fallo:
+                
+                masintentos = input('\nTe gustaria jugar otra vez?? (Si o No) \nR/. ')
+
+                fallo = siono(masintentos)  
+
+            if masintentos.lower() == 'no':
+                print('\nMuchas gracias por participar de este juego, nos vemos pronto!')
+                break
+        
+# Funcion para forzar al usuario a responder 'si' o 'no' solamente
+def siono(resp): 
+        
+    if resp.lower() != 'si' and resp.lower() != 'no':
+        print('\nDebes responder Si o No solamente!\n Aqui vamos de nuevo...')
+        return True
+    return False
+
+
+# Funcion para forzar al usuario a escribir una sola palabra
+def unapalabra(palabra):
+    if ' ' in palabra:
+        print('Solo palabras, no oraciones ni expresiones, vamos denuevo...')
+        return True
+    return False
+
+# Reglas del juego
 def reglasdeljuego():
     
-    print('\nMe vas a escribir un nombre, si el nombre es valido te lo dire')
-    print('\nSi no es valido (uno de los prohibidos en nuestra base de datos ), te regresare hasta que des con un nombre valido.')
+    print('\nReglas')
+    print('\n1.) Me vas a escribir una palabra.')
+    print('2.) Si el palabra es valido, te lo dire.')
+    print('3.)Si no es valido (uno de los prohibidos en nuestra base de datos ), te regresare hasta que des con un palabra valido.')
+
 
 if __name__ == '__main__':
     
+    fallo = True
+
     print('Bienvenido a esta lista de usuarios prohibidos...')
     print('\nTe explico como funciona: ')
+    
     reglasdeljuego()
 
-    resp = input('Estas preparado?? \nR/. ')
-    if resp == 'si':
+    while fallo:
+        
+        resp = input('\nEstas preparado?? (Si o No...) \nR/. ')
 
-        nombreprueba = ''
+        fallo = siono(resp)
 
-        while True:
+    if resp.lower() == 'si':
 
-            nombreprueba = input('\nIngresa un nombre: \n R/. ')
-
-            pruebanombre(nombreprueba)
-
-            if nombreprueba.capitalize() not in usuarios:
-                break
-    
-    print('Fue un placer, nos vemos!!!')
-
+        prueba()
+    elif resp.lower() == 'no':
+        print('\n De acuerdo, nos veremos cuando estes listo!')
     
     

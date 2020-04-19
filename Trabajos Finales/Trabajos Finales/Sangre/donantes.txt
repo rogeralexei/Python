@@ -1,0 +1,3 @@
+XXXXXXXXXXXXXXXXXXXXX
+{'Nombre': 'Hernan', 'Apellido': 'Dominguez', 'Edad': 18, 'Sexo': 'M', 'Sangre': 'O+'}
+XXXXXXXXXXXXXXXXXXXXX

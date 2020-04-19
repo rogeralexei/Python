@@ -1,0 +1,3 @@
+XXXXXXXXXXXXXXXXXXXXX
+{'Nombre': 'Freedie', 'Apellido': 'Krugger', 'Edad': 34, 'Sexo': 'M', 'Sangre': 'O-'}
+XXXXXXXXXXXXXXXXXXXXX
